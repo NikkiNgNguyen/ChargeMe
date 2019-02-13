@@ -13,12 +13,15 @@ import Search from "./Views/search";
 import Login from "./Views/login";
 import FriendsList from "./Views/friendsList";
 import ReceiptScanner from "./Views/receiptScanner";
-import {BrowserRouter, Route} from "react-router-dom";
+import Navbar from "./Components/Navbar"
+import {BrowserRouter, Route,Switch} from "react-router-dom";
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
+        <Navbar/>
+        <Switch>
         <Route path="/billSplit" component={BillSplit} />
         <Route path="/createAccount" component={CreateAccount} />
         <Route path="/currentTransactions" component={CurrentTransactions} />
@@ -29,7 +32,8 @@ class App extends Component {
         <Route path="/login" component={Login} />
         <Route path="/receiptScanner" component={ReceiptScanner} />
         <Route path="/friendsList" component={FriendsList} />
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        </Switch>
         </div>
     </BrowserRouter>
     );
