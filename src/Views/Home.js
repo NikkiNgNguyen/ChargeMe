@@ -20,7 +20,7 @@ export default class Home extends Component {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="stylesheet" href="bootstrap.css" media="screen" />
           <link rel="stylesheet" href="custom.min.css" />
-        
+
           <div id="homepage">
           <div className= "bs-component">
           <div className="jumbotron">
@@ -28,8 +28,7 @@ export default class Home extends Component {
           <p className="lead"> "The best app to split bills with your friends."</p>
           <hr className="my-4"></hr>
           <p> "Make paying more efficient."</p>
-          <p className="lead"> <a className="btn btn-primary btn-lg" role="button">Learn More</a>
-          </p>
+          <NavLink to="/login"><p className="lead"> <p className="btn btn-primary btn-lg" role="button"> Get Started</p></p></NavLink>
           </div>
           </div>
           </div>
